@@ -1,4 +1,5 @@
 # EDR-Live-Response
+
 PowerShell Data Collection Script for use with Carbon Black Enterprise Response
 To use, simply configure the $dest and $tools variables to reflect appropriate paths.
 ##  Version 1.0  
