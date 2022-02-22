@@ -5,8 +5,7 @@ To use, simply configure the $dest and $tools variables to reflect appropriate p
 ##  Version 1.0  
 ##
 ##  This Powershell script is updated to follow the collection process modelled by Corey Harrell's
-##  TR3Secure Data Collection Script: http://journeyintoir.blogspot.com/2013/09/tr3secure-data-collection-script.html and
-##  https://code.google.com/p/jiir-resources/downloads/list
+##  TR3Secure Data Collection Script: http://journeyintoir.blogspot.com/2013/09/tr3secure-data-collection-script.html and https://code.google.com/p/jiir-resources/downloads/list
 ##	
 ##	References 
 ##		Malware Forensics: Investigating and Analyzing Malicious Code by Cameron H. Malin, Eoghan Casey, and James M. Aquilina 
@@ -16,7 +15,7 @@ To use, simply configure the $dest and $tools variables to reflect appropriate p
 ##		Corey Harrell (Journey Into Incident Response)
 ##		
 
-##     [REQUIRED TOOLS]
+##  [REQUIRED TOOLS]
 ##		Rawcopy -- https://github.com/jschicht/RawCopy
 ##		Handel -- https://download.sysinternals.com/files/Handle.zip
 ##		Autorunsc -- Command line version of Autoruns - https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx
