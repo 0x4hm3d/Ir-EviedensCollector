@@ -1,13 +1,6 @@
 # EDR-Live-Response
-PowerShell Data Collection Script for use with Carbon Black Enterprise Response
-To use, simply configure the $dest and $tools variables to reflect appropriate paths.
+PowerShell Data Collection Script for use with Carbon Black Enterprise Response To use, simply configure the $dest and $tools variables to reflect appropriate paths.
 his Powershell script is updated to follow the collection process modelled by Corey Harrell's	
-##	References 
-		Malware Forensics: Investigating and Analyzing Malicious Code by Cameron H. Malin, Eoghan Casey, and James M. Aquilina 
-	    Windows Forensics Analysis (WFA) Second Edition by Harlan Carvey
-        RFC 3227 - Guidelines for Evidence Collection and Archiving http://www.faqs.org/rfcs/rfc3227.html
-        Dual Purpose Volatile Data Collection Script http://journeyintoir.blogspot.com/2012/01/dual-purpose-volatile-data-collection.html
-        Corey Harrell (Journey Into Incident Response)	
 
 ##  [REQUIRED TOOLS]
 		Rawcopy -- https://github.com/jschicht/RawCopy
@@ -17,7 +10,7 @@ his Powershell script is updated to follow the collection process modelled by Co
 		WinPmem -- MemoryImager https://github.com/Velocidex/WinPmem/releases/
 		DumpIt -- MememoryImager https://github.com/thimbleweed/All-In-USB/tree/master/utilities/DumpIt
 
-##	[VARIOUS ANALYSIS TOOLS]
+##  [VARIOUS ANALYSIS TOOLS]
 		RegRipper -- Tool for extracting data from Registry and NTUSER.dat files. https://github.com/keydet89/RegRipper2.8
 		WinPrefetchView -- utility to read Prefetch files. http://www.nirsoft.net/utils/win_prefetch_view.html
 		MFTDump -- tool to dump the contents of the $MFT. http://malware-hunters.net/2012/09/
@@ -26,25 +19,37 @@ his Powershell script is updated to follow the collection process modelled by Co
                                     "AND MANY DFIR TOOLS YOU CAN USE IT"
 
 ## CB Live Response - Best Automated Artifact Collection script/utility
-        - For Carbon Black Users just follow the instructions...
+        For Carbon Black Users just follow the instructions...
         Download the zip file from https://github.com/0x4hm3d/EDR-Live-Response.  Click on the Clone/Download button
         Create the Folders in " C:\IR " in a server dedicated for storage of IR artifacts
         Share out C:\IR as IR folder, grant only to admin
         Launch Live Response Console in CbR/CbD
         Execute all the following commands in Live Response Console
         
-##  Usfull Commands via CBLR
-        execfg msg * Security Team need to take over your machine to investigate an incident.  Please save your work.  You can reach us at xxx-xxxxxx, or email secops@cbdemo.com for details.
-        execfg net use (display existing map drives)
-        execfg net use z: /delete (clear existing map drives to Z)
-        execfg net use z: \\XXX\IR /User:MACHINENAME\admin xxxxxx
-        execfg net use (show new mapped drive)
-        cd c:\ (change directory to c:\drive)
-        dir (show directory listings)
-        mkdir c:\temp
-        put c:\temp (upload ir-EviedensCollector.ps1 from the workstation)
-        dir c:\temp (confirm that ir-EviedensCollector.ps1 is uploaded successfully)
-        execfg powershell set-executionpolicy unrestricted (set powershell execution policy to unrestricted)
-        execfg powershell get-executionpolicy (confirmed unrestricted is set)
-        execfg powershell c:\temp\extract_artifacts.ps1
-        Check the progress in the Z:\IR\ folder
+## Commands via CBLR
+	- Alert the User 
+		execfg msg * Security Team need to take over your machine to investigate an incident.  Please save your work.  You can reach us at xxx-xxxxxx, or email 			secops@cbdemo.com for details.
+	- Display existing map drives
+        	execfg net use 
+	- Clear existing map drives to Z
+        	execfg net use z: /delete
+        	execfg net use z: \\XXX\IR /User:MACHINENAME\admin xxxxxx
+	- Show new mapped drive
+        	execfg net use
+	- Change directory to c:\drive
+        	cd c:\
+	- Show directory listings
+        	dir
+	- Create temp folder in the C:/ drives
+        	mkdir c:\temp
+	- Upload ir-EviedensCollector.ps1 script from the workstation  and Folder of the TOOLS will be use to collect artifact with the same named
+        	put c:\temp
+	- Confirm that ir-EviedensCollector.ps1 and Tools is uploaded successfully
+        	dir c:\temp
+	- Set powershell execution policy to unrestricted
+        	execfg powershell Set-Executionpolicy Unrestricted
+	- Confirmed unrestricted is set
+        	execfg powershell Get-Executionpolicy
+	- Run the script and wait until collected artifacts finshed
+        	execfg powershell c:\temp\extract_artifacts.ps1
+	- Check the progress in the Z:\IR\ folder
