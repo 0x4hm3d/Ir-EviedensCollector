@@ -28,7 +28,8 @@ his Powershell script is updated to follow the collection process modelled by Co
         
 ## Commands via CBLR
 	- Alert the User 
-		execfg msg * Security Team need to take over your machine to investigate an incident.  Please save your work.  You can reach us at xxx-xxxxxx, or email 			secops@cbdemo.com for details.
+		execfg msg * Security Team need to take over your machine to investigate an incident.  Please save your work.  
+		You can reach us at xxx-xxxxxx, or email secops@cbdemo.com for details.
 	- Display existing map drives
         	execfg net use 
 	- Clear existing map drives to Z
