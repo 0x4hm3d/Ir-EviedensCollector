@@ -1,7 +1,7 @@
-#   IR Forensic Ir-EviedensCollector
+#   IR Forensic Eviedens Collector
     Ir-EviedensCollector is a PowerShell script utilized to pull several forensic artifacts from a live Windows 8, 10, Server 2012R2, and Server 2019 systems on your network, Remotrly or by EDR.
     simply configure the $dest and $tools variables to reflect appropriate paths
-#   [Artifacts it grabs]:
+#   Artifacts it grabs:
 	   Disk Information
 	   System Information
 	   User Information
@@ -23,7 +23,7 @@
 #   [NOTE]: 
     As expected: Must be ran a user that will have Admin creds on the remote system. The assumption is that the target system is part of a domain.
 
-##  [REQUIRED TOOLS]
+##  REQUIRED TOOLS
 		Rawcopy -- https://github.com/jschicht/RawCopy
 		Handel -- https://download.sysinternals.com/files/Handle.zip
 		Autorunsc -- Command line version of Autoruns - https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx
@@ -31,7 +31,7 @@
 		WinPmem -- MemoryImager https://github.com/Velocidex/WinPmem/releases/
 		DumpIt -- MememoryImager https://github.com/thimbleweed/All-In-USB/tree/master/utilities/DumpIt
 
-##  [VARIOUS ANALYSIS TOOLS]
+##  VARIOUS ANALYSIS TOOLS
 		RegRipper -- Tool for extracting data from Registry and NTUSER.dat files. https://github.com/keydet89/RegRipper2.8
 		WinPrefetchView -- utility to read Prefetch files. http://www.nirsoft.net/utils/win_prefetch_view.html
 		MFTDump -- tool to dump the contents of the $MFT. http://malware-hunters.net/2012/09/
