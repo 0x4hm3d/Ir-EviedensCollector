@@ -1,6 +1,6 @@
 #   IR Forensic Eviedens Collector
-    Ir-EviedensCollector is a PowerShell script utilized to pull several forensic artifacts from a live Windows 8, 10, Server 2012R2, and Server 2019 systems on your network, Remotrly or by EDR.
-    simply configure the $dest and $tools variables to reflect appropriate paths
+    Ir-EviedensCollector is a PowerShell script utilized to pull several forensic artifacts from a live Windows 8, 10, Server 2012R2, 
+    and Server 2019 systems on your network, Remotrly or by EDR. simply configure the $dest and $tools variables to reflect appropriate paths
 #   Artifacts it grabs:
 	   Disk Information
 	   System Information
