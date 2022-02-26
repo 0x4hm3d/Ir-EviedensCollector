@@ -2,42 +2,42 @@
     Ir-EviedensCollector is a PowerShell script utilized to pull several forensic artifacts from a live Windows 8, 10, Server 2012R2, 
     and Server 2019 systems on your network, Remotrly or by EDR. simply configure the $dest and $tools variables to reflect appropriate paths
 #   Artifacts it grabs:
-	   Disk Information
-	   System Information
-	   User Information
-	   Network Configuration
-	   Netstat info
-	   Route Table, ARP Table, DNS Cache, HOSTS file
-	   Running Processes
-	   Services
-	   Event Logs (System, Security, Application, etc)
-	   Prefetch Files
-	   $MFT
-	   NTFS $LogFile
-	   Amcache.hve
-	   Registry Files
-	   User NTUSER.dat files
-	   Internet History Files (IE, Firefox, Chrome, Edge from user profiles used within last 15 days)
+	  - Disk Information
+	  - System Information
+	  - User Information
+	  - Network Configuration
+	  - Netstat info
+	  - Route Table, ARP Table, DNS Cache, HOSTS file
+	  - Running Processes
+	  - Services
+	  - Event Logs (System, Security, Application, etc)
+	  - Prefetch Files
+	  - $MFT
+	  - NTFS $LogFile
+	  - Amcache.hve
+	  - Registry Files
+	  - User NTUSER.dat files
+	  - Internet History Files (IE, Firefox, Chrome, Edge from user profiles used within last 15 days)
 	   When done collecting the artifacts, it will 7zip the data and grep the info off the box for off-line analysis.
 
 #   [NOTE]: 
     As expected: Must be ran a user that will have Admin creds on the remote system. The assumption is that the target system is part of a domain.
 
 ##  REQUIRED TOOLS
-		Rawcopy -- https://github.com/jschicht/RawCopy
-		Handel -- https://download.sysinternals.com/files/Handle.zip
-		Autorunsc -- Command line version of Autoruns - https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx
-		7-Zip -- Part of the 7-Zip archiver, 7za can be downloaded from here: http://www.7-zip.org/
-		WinPmem -- MemoryImager https://github.com/Velocidex/WinPmem/releases/
-		DumpIt -- MememoryImager https://github.com/thimbleweed/All-In-USB/tree/master/utilities/DumpIt
+	  - Rawcopy -- https://github.com/jschicht/RawCopy
+	  - Handel -- https://download.sysinternals.com/files/Handle.zip
+	  - Autorunsc -- Command line version of Autoruns - https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx
+	  - 7-Zip -- Part of the 7-Zip archiver, 7za can be downloaded from here: http://www.7-zip.org/
+	  - WinPmem -- MemoryImager https://github.com/Velocidex/WinPmem/releases/
+	  - DumpIt -- MememoryImager https://github.com/thimbleweed/All-In-USB/tree/master/utilities/DumpIt
 
 ##  VARIOUS ANALYSIS TOOLS
-		RegRipper -- Tool for extracting data from Registry and NTUSER.dat files. https://github.com/keydet89/RegRipper2.8
-		WinPrefetchView -- utility to read Prefetch files. http://www.nirsoft.net/utils/win_prefetch_view.html
-		MFTDump -- tool to dump the contents of the $MFT. http://malware-hunters.net/2012/09/
-		PECmd - utility to parse Prefetch files. http://binaryforay.blogspot.com/2016/01/pecmd-v0600-released.htm
-		Triforce ANJP -- tool to examining the MFT, LogFile, and USN. https://www.gettriforce.com/product/anjp-free/
-		Volatility Memory Analysis https://github.com/volatilityfoundation/volatility
+	  1- RegRipper -- Tool for extracting data from Registry and NTUSER.dat files. https://github.com/keydet89/RegRipper2.8
+	  2- WinPrefetchView -- utility to read Prefetch files. http://www.nirsoft.net/utils/win_prefetch_view.html
+	  3- MFTDump -- tool to dump the contents of the $MFT. http://malware-hunters.net/2012/09/
+	  4- PECmd - utility to parse Prefetch files. http://binaryforay.blogspot.com/2016/01/pecmd-v0600-released.htm
+	  5- Triforce ANJP -- tool to examining the MFT, LogFile, and USN. https://www.gettriforce.com/product/anjp-free/
+	  6- Volatility Memory Analysis https://github.com/volatilityfoundation/volatility
                                     "AND MANY DFIR TOOLS YOU CAN USE IT"
 
 ## CB Live Response - Best Automated Artifact Collection script/utility
