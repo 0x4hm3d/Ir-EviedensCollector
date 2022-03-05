@@ -74,5 +74,5 @@
 	- Confirmed unrestricted is set
         	execfg powershell Get-Executionpolicy
 	- Run the script and wait until collected artifacts finshed
-        	execfg powershell c:\temp\extract_artifacts.ps1
+        	execfg powershell c:\temp\Ir-EviedensCollector.ps1
 	- Check the progress in the Z:\IR\ folder
